@@ -8,6 +8,7 @@
   --blue-soft: hsl(231, 69%, 60%);
   --red-soft: hsl(0, 94%, 66%);
   --grey-soft: hsl(0, 0%, 97%);
+  --grey-darker: hsl(0, 0%, 53%);
   --blue-dark: hsl(229, 31%, 21%);
   --rubik: "Rubik", sans-serif;
 }
@@ -18,6 +19,11 @@
   margin: 0 auto;
 }
 
+.hero {
+  font-family: var(--rubik);
+  color: var(--blue-dark);
+}
+
 .hero__nav {
   display: flex;
   justify-content: space-between;
@@ -26,6 +32,7 @@
 .hero__figure {
   margin: 2rem 0;
   position: relative;
+  max-width: 600px;
 }
 .hero__figure .figure__img {
   display: block;
@@ -45,6 +52,40 @@
   border-top-left-radius: 80px;
   border-bottom-left-radius: 80px;
   z-index: -1;
+}
+
+.hero__texts {
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+.hero__texts .hero__title {
+  font-weight: 500;
+}
+.hero__texts .hero__paragraph {
+  color: var(--grey-darker);
+  line-height: 1.7rem;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.hero__buttons .hero__cta {
+  color: var(--grey-soft);
+  background-color: var(--blue-soft);
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 1.3rem;
+  border-radius: 5px;
+}
+.hero__buttons .hero__cta--active {
+  color: var(--grey-darker);
+  background-color: var(--grey-soft);
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=styles.css.map */
