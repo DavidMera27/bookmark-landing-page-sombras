@@ -56,7 +56,6 @@ body {
     bottom: 0;
     left: 6rem;
     border: {
-      top-left-radius: 80px;
       bottom-left-radius: 80px;
     }
     z-index: -1;
@@ -67,9 +66,7 @@ body {
     bottom: -2.5rem;
     right: 6rem;
     border: {
-      top-left-radius: unset;
       bottom-left-radius: unset;
-      top-right-radius: 80px;
       bottom-right-radius: 80px;
     }
   }
@@ -100,7 +97,7 @@ body {
   &.texts--extension {
     padding: unset;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
 
     .texts__title {
       font-size: 1.3rem;
@@ -190,7 +187,7 @@ body {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 3rem;
 
       .extension{
         padding: 3rem 0 1.5rem;
