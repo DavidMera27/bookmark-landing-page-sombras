@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-soft: hsl(231, 69%, 60%);
+  --red-soft: hsl(0, 94%, 66%);
+  --grey-soft: hsl(0, 0%, 97%);
+  --blue-dark: hsl(229, 31%, 21%);
+
+  --rubik: "Rubik", sans-serif;
+}
+
+.container {
+  width: 90%;
+  padding: 2.5rem 1rem;
+  margin: 0 auto;
+}
+
+.hero__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__figure {
+  margin: 2rem 0;
+  position: relative;
+
+  .figure__img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+}
+
+.figure__shadow{
+    &::after {
+    content: "";
+    background-color: var(--blue-soft);
+    display: block;
+    position: absolute;
+    top: 3.4rem;
+    right: 0;
+    bottom: 0;
+    left: 6rem;
+    border: {
+        top-left-radius: 80px; 
+        bottom-left-radius: 80px;
+    };
+    z-index: -1;
+  }
+}
