@@ -46,11 +46,10 @@ botonesLinks.forEach((btn, index) => {
         topicSamples
             .forEach(el => el.classList.remove('topic__sample--active'));
 
-        // Si no estaba activo, lo activamos
-        if (!yaActivo) {
-            actual.classList.add('topic__link--active');
-            topicSample.classList.add('topic__sample--active');
-        }
+        // Como no estaba activo, lo activamos
+        actual.classList.add('topic__link--active');
+        topicSample.classList.add('topic__sample--active');
+
     });
 });
 
