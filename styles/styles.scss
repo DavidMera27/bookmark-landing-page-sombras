@@ -230,9 +230,13 @@ body {
     }
 
     .topic__sample {
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 3rem;
+      
+      &--active{
+        display: flex;
+      }
     }
 
     .topic__extensions {

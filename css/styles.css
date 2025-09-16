@@ -197,9 +197,12 @@ body {
   border-top: 1px solid hsl(0, 0%, 75%);
 }
 .topics .topic__section .topic__sample {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 3rem;
+}
+.topics .topic__section .topic__sample--active {
+  display: flex;
 }
 .topics .topic__section .topic__extensions {
   width: 75%;
