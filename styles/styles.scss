@@ -32,16 +32,15 @@ body {
 
 .figure {
   margin: 2rem 0;
+  margin-left: auto;
   position: relative;
+  width: 100%;
   max-width: 600px;
 
   .figure__img {
     display: block;
     width: 90%;
     margin: 0 auto;
-    &--left {
-      width: 80%;
-    }
   }
 }
 
@@ -60,14 +59,19 @@ body {
     }
     z-index: -1;
   }
+  &--left {
+    margin-left: unset;
+    margin-right: auto;
+  }
   &--left::after {
-    top: 3.4rem;
+    top: 20%;
+    right: 20%;
     left: 0;
-    bottom: -2.5rem;
-    right: 6rem;
+    bottom: -40px;
     border: {
       bottom-left-radius: unset;
-      bottom-right-radius: 80px;
+      bottom-right-radius: 140px;
+      top-right-radius: 200px;
     }
   }
 }
@@ -233,8 +237,8 @@ body {
       display: none;
       flex-direction: column;
       gap: 3rem;
-      
-      &--active{
+
+      &--active {
         display: flex;
       }
     }

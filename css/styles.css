@@ -31,16 +31,15 @@ body {
 
 .figure {
   margin: 2rem 0;
+  margin-left: auto;
   position: relative;
+  width: 100%;
   max-width: 600px;
 }
 .figure .figure__img {
   display: block;
   width: 90%;
   margin: 0 auto;
-}
-.figure .figure__img--left {
-  width: 80%;
 }
 
 .figure__shadow::after {
@@ -55,13 +54,18 @@ body {
   border-bottom-left-radius: 80px;
   z-index: -1;
 }
+.figure__shadow--left {
+  margin-left: unset;
+  margin-right: auto;
+}
 .figure__shadow--left::after {
-  top: 3.4rem;
+  top: 20%;
+  right: 20%;
   left: 0;
-  bottom: -2.5rem;
-  right: 6rem;
+  bottom: -40px;
   border-bottom-left-radius: unset;
-  border-bottom-right-radius: 80px;
+  border-bottom-right-radius: 140px;
+  border-top-right-radius: 200px;
 }
 
 .texts {
