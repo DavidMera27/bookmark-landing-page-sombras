@@ -76,19 +76,56 @@ body {
   color: var(--grey-darker);
   line-height: 1.7rem;
 }
-.texts.texts--topic {
+.texts--topic {
   padding: unset;
 }
-.texts.texts--topic .texts__title {
+.texts--topic .texts__title {
   font-size: 1.5rem;
 }
-.texts.texts--extension {
+.texts--topic .texts__title--folding {
+  margin: 0 auto;
+  width: 80%;
+}
+.texts--extension {
   padding: unset;
   gap: 0.5rem;
   margin-bottom: 0.7rem;
 }
-.texts.texts--extension .texts__title {
+.texts--extension .texts__title {
   font-size: 1.3rem;
+}
+.texts--folding {
+  text-align: unset;
+  border-bottom: 1px solid hsl(0, 0%, 75%);
+}
+.texts--folding .texts__title {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 1.5rem 0;
+}
+.texts--folding .folding__cta {
+  position: absolute;
+  right: 0;
+}
+.texts--folding .folding__cta .folding__icon {
+  display: inline-block;
+  width: 1.2rem;
+  aspect-ratio: 18/12;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.texts--folding .texts__paragraph {
+  margin-bottom: 2rem;
+  display: none;
+}
+.texts--folding--active .folding__cta .folding__icon {
+  background-image: url("../images/icon-arrow-red.svg");
+}
+.texts--folding--active .texts__paragraph {
+  display: block;
 }
 
 .hero__buttons {
@@ -182,6 +219,13 @@ body {
 }
 .topics .topic__section .topic__extensions .extension__icon {
   width: 100px;
+}
+.topics .topic__section .topic__foldings .folding {
+  padding-top: unset;
+  padding-bottom: unset;
+}
+.topics .topic__section .topic__cta {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
