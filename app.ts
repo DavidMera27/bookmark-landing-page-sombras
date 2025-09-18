@@ -1,28 +1,7 @@
 
-const botonesFolding: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.folding__cta');
 const botonesLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.topic__link');
 const topicSamples: NodeListOf<HTMLDivElement> = document.querySelectorAll('.topic__sample');
 
-botonesFolding.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        if (!(e.currentTarget instanceof Element)) return;
-        const actual = e.currentTarget.closest('.texts')
-
-        if (!(actual instanceof Element)) return;
-        const yaActivo = actual.classList.contains('texts--folding--active');
-
-        // Remueve la clase de todos
-        document.querySelectorAll('.texts--folding--active')
-            .forEach(el => el.classList.remove('texts--folding--active'));
-
-        // Si no estaba activo, lo activamos
-        if (!yaActivo) {
-            actual.classList.add('texts--folding--active');
-        }
-    });
-});
 
 botonesLinks.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {

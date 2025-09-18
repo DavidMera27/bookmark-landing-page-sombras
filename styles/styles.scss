@@ -118,46 +118,13 @@ body {
     border-bottom: 1px solid hsl(0, 0%, 75%);
 
     .texts__title {
-      position: relative;
       font-size: 0.9rem;
       font-weight: 500;
       padding: 1.5rem 0;
     }
 
-    .folding__cta {
-      position: absolute;
-      right: 0;
-
-      .folding__icon {
-        display: inline-block;
-        width: 1.2rem;
-        aspect-ratio: 18 / 12; // proporción real del SVG
-        background: {
-          image: url("../images/icon-arrow.svg");
-          repeat: no-repeat;
-          position: center;
-          size: contain;
-        }
-      }
-    }
-
     .texts__paragraph {
       margin-bottom: 2rem;
-      display: none;
-    }
-
-    &--active {
-      .folding__cta {
-        .folding__icon {
-          background: {
-            image: url("../images/icon-arrow-red.svg");
-          }
-        }
-      }
-
-      .texts__paragraph {
-        display: block;
-      }
     }
   }
 }
@@ -267,10 +234,37 @@ body {
 
     .topic__foldings {
       .folding {
+        display: block;
         padding: {
           top: unset;
           bottom: unset;
         }
+
+        summary {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          list-style: none;
+
+          .folding__icon {
+            display: inline-block;
+            width: 1.2rem;
+            aspect-ratio: 18 / 12; // proporción real del SVG
+            background: {
+              image: url("../images/icon-arrow.svg");
+              repeat: no-repeat;
+              position: center;
+              size: contain;
+            }
+          }
+        }
+
+        &[open] {
+          .folding__icon {
+            background: {
+              image: url("../images/icon-arrow-red.svg");
+            }
+          }}
       }
     }
 

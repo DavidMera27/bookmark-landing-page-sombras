@@ -103,33 +103,12 @@ body {
   border-bottom: 1px solid hsl(0, 0%, 75%);
 }
 .texts--folding .texts__title {
-  position: relative;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 1.5rem 0;
 }
-.texts--folding .folding__cta {
-  position: absolute;
-  right: 0;
-}
-.texts--folding .folding__cta .folding__icon {
-  display: inline-block;
-  width: 1.2rem;
-  aspect-ratio: 18/12;
-  background-image: url("../images/icon-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 .texts--folding .texts__paragraph {
   margin-bottom: 2rem;
-  display: none;
-}
-.texts--folding--active .folding__cta .folding__icon {
-  background-image: url("../images/icon-arrow-red.svg");
-}
-.texts--folding--active .texts__paragraph {
-  display: block;
 }
 
 .hero__buttons {
@@ -228,8 +207,27 @@ body {
   width: 100px;
 }
 .topics .topic__section .topic__foldings .folding {
+  display: block;
   padding-top: unset;
   padding-bottom: unset;
+}
+.topics .topic__section .topic__foldings .folding summary {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+}
+.topics .topic__section .topic__foldings .folding summary .folding__icon {
+  display: inline-block;
+  width: 1.2rem;
+  aspect-ratio: 18/12;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.topics .topic__section .topic__foldings .folding[open] .folding__icon {
+  background-image: url("../images/icon-arrow-red.svg");
 }
 .topics .topic__section .topic__cta {
   margin: 0 auto;
