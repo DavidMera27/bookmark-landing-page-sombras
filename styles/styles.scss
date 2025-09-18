@@ -36,7 +36,6 @@ body {
   position: relative;
   width: 100%;
   max-width: 600px;
-
   .figure__img {
     display: block;
     width: 90%;
@@ -80,51 +79,52 @@ body {
   text-align: center;
   display: grid;
   gap: 1rem;
-
   .texts__title {
     font-weight: 600;
   }
-
   .texts__paragraph {
     color: var(--grey-darker);
     line-height: 1.7rem;
   }
-
   &--topic {
     padding: unset;
-
     .texts__title {
       font-size: 1.5rem;
-
       &--folding {
         margin: 0 auto;
         width: 80%;
       }
     }
   }
-
   &--extension {
     padding: unset;
     gap: 0.5rem;
     margin-bottom: 0.7rem;
-
     .texts__title {
       font-size: 1.3rem;
     }
   }
-
   &--folding {
     text-align: unset;
     border-bottom: 1px solid hsl(0, 0%, 75%);
-
     .texts__title {
       font-size: 0.9rem;
       font-weight: 500;
       padding: 1.5rem 0;
     }
-
     .texts__paragraph {
       margin-bottom: 2rem;
+    }
+  }
+  &--joining {
+    padding: 5rem 0 0;
+    background-color: var(--blue-soft);
+    color: white;
+    .joining__numbers {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: 500;
+      font-size: 0.8rem;
     }
   }
 }
@@ -158,19 +158,16 @@ body {
 .topics {
   margin: 3rem auto;
   padding: 1px 0;
-
   .topic__section {
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-
     .topic__links {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
-
       .topic__link {
         display: block;
         position: relative;
@@ -179,7 +176,6 @@ body {
         color: var(--grey-darker);
         text-decoration: none;
         border-bottom: 1px solid hsl(0, 0%, 75%);
-
         &.topic__link--active {
           color: var(--blue-dark);
           font-weight: 500;
@@ -199,7 +195,6 @@ body {
         border-top: 1px solid hsl(0, 0%, 75%);
       }
     }
-
     .topic__sample {
       display: none;
       flex-direction: column;
@@ -209,14 +204,12 @@ body {
         display: flex;
       }
     }
-
     .topic__extensions {
       width: 75%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 3rem;
-
       .extension {
         padding: 3rem 0 1.5rem;
         border-radius: 1rem;
@@ -225,13 +218,11 @@ body {
         gap: 2rem;
         align-items: center;
         box-shadow: 1px 12px 20px 4px rgba(75, 75, 75, 0.15);
-
         &__icon {
           width: 100px;
         }
       }
     }
-
     .topic__foldings {
       .folding {
         display: block;
@@ -239,13 +230,11 @@ body {
           top: unset;
           bottom: unset;
         }
-
         summary {
           display: flex;
           justify-content: space-between;
           cursor: pointer;
           list-style: none;
-
           .folding__icon {
             display: inline-block;
             width: 1.2rem;
@@ -258,18 +247,90 @@ body {
             }
           }
         }
-
         &[open] {
           .folding__icon {
             background: {
               image: url("../images/icon-arrow-red.svg");
             }
-          }}
+          }
+        }
       }
     }
-
     .topic__cta {
       margin: 0 auto;
+    }
+    .topic__form {
+      padding: 1rem 1.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 500px;
+       margin: 0 auto;
+      .form__input {
+        font-family: var(--rubik);
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 5px;
+        padding: 16px 0;
+        border: none;
+        outline: none;
+        &--email {
+          color: var(--blue-dark);
+          width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        &--btn {
+          color: white;
+          background-color: var(--red-soft);
+        }
+      }
+      .input__wrapper {
+        position: relative;
+        &::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          width: 1.5em;
+          height: 1.5em;
+          background-image: url("../images/icon-error.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          pointer-events: none;
+        }
+        &::after {
+          content: "Whoops, make sure it's an email";
+          border: {
+            bottom-left-radius: 5px;
+            bottom-right-radius: 5px;
+          }
+          display: none;
+          position: relative;
+          padding: 2px 0 5px 1rem;
+          font-size: small;
+          font-style: italic;
+          font-weight: 500;
+          text-align: left;
+          left: 0;
+          bottom: 0;
+          pointer-events: none;
+          background-color: var(--red-soft);
+        }
+        &--error {
+          background-color: var(--red-soft);
+          border-radius: 5px;
+          .form__input--email {
+            border: 3px solid var(--red-soft);
+          }
+          &::before,
+          &::after {
+            display: block;
+          }
+        }
+      }
     }
   }
 }

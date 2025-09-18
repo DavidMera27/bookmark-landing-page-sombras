@@ -110,6 +110,17 @@ body {
 .texts--folding .texts__paragraph {
   margin-bottom: 2rem;
 }
+.texts--joining {
+  padding: 5rem 0 0;
+  background-color: var(--blue-soft);
+  color: white;
+}
+.texts--joining .joining__numbers {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
 
 .hero__buttons {
   display: flex;
@@ -231,6 +242,76 @@ body {
 }
 .topics .topic__section .topic__cta {
   margin: 0 auto;
+}
+.topics .topic__section .topic__form {
+  padding: 1rem 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.topics .topic__section .topic__form .form__input {
+  font-family: var(--rubik);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+}
+.topics .topic__section .topic__form .form__input--email {
+  color: var(--blue-dark);
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.topics .topic__section .topic__form .form__input--btn {
+  color: white;
+  background-color: var(--red-soft);
+}
+.topics .topic__section .topic__form .input__wrapper {
+  position: relative;
+}
+.topics .topic__section .topic__form .input__wrapper::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("../images/icon-error.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.topics .topic__section .topic__form .input__wrapper::after {
+  content: "Whoops, make sure it's an email";
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+  position: relative;
+  padding: 2px 0 5px 1rem;
+  font-size: small;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-color: var(--red-soft);
+}
+.topics .topic__section .topic__form .input__wrapper--error {
+  background-color: var(--red-soft);
+  border-radius: 5px;
+}
+.topics .topic__section .topic__form .input__wrapper--error .form__input--email {
+  border: 3px solid var(--red-soft);
+}
+.topics .topic__section .topic__form .input__wrapper--error::before, .topics .topic__section .topic__form .input__wrapper--error::after {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

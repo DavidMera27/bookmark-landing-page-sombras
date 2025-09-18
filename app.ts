@@ -1,22 +1,35 @@
-
+//Este tipado no es necesario, aqui lo que importa es el type-narrowing despues
 const botonesLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.topic__link');
 const topicSamples: NodeListOf<HTMLDivElement> = document.querySelectorAll('.topic__sample');
+const formInput: HTMLInputElement = document.querySelector('.form__input--email');
+const formBtn: HTMLButtonElement = document.querySelector('.form__input--btn');
+const inputWrapper: HTMLDivElement = document.querySelector('.input__wrapper');
 
+formBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!(formInput instanceof HTMLInputElement) || !(inputWrapper instanceof HTMLDivElement)) return;
+    if(formInput.validity.valid) return;
+    if(formInput.validity.typeMismatch || formInput.validity.valueMissing) inputWrapper.classList.add('input__wrapper--error');
+});
+
+formInput.addEventListener('focus', (e) => {
+    if (!(e.currentTarget instanceof HTMLInputElement)) return;
+    inputWrapper.classList.remove('input__wrapper--error');
+})
 
 botonesLinks.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
-
-        if (!(e.currentTarget instanceof Element)) return;
+        
+        //Type-narrowing del elemento
+        if (!(e.currentTarget instanceof HTMLAnchorElement)) return;
         const actual = e.currentTarget;
-
-        if (!(actual instanceof Element)) return;
         const yaActivo = actual.classList.contains('topic__link--active');
 
         // Si ya estaba activo, no se hace nada
         if (yaActivo) return;
 
-        if (!(topicSamples[index] instanceof Element)) return;
+        if (!(topicSamples[index] instanceof HTMLDivElement)) return;
         const topicSample = topicSamples[index];
 
         // Remueve la clase de todos
@@ -32,16 +45,3 @@ botonesLinks.forEach((btn, index) => {
     });
 });
 
-
-
-
-/*
-//Para footer input email
-<input type="email" id="correo" required>
-
-if (!input.validity.valid) {
-  // input.validity.typeMismatch → si el formato de email está mal
-  // input.validity.valueMissing → si está vacío y es required
-}
-
-*/
