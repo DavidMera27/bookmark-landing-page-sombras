@@ -99,8 +99,6 @@ body {
   font-size: 1.3rem;
 }
 .texts--folding {
-  padding-left: 0;
-  padding-right: 0;
   text-align: unset;
   border-bottom: 1px solid hsl(0, 0%, 75%);
 }
@@ -218,6 +216,10 @@ body {
 }
 .topics .topic__section .topic__extensions .extension__icon {
   width: 100px;
+}
+.topics .topic__section .topic__foldings {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .topics .topic__section .topic__foldings .folding {
   display: block;

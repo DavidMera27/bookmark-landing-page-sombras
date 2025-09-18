@@ -105,8 +105,6 @@ body {
     }
   }
   &--folding {
-    padding-left: 0;
-    padding-right: 0;
     text-align: unset;
     border-bottom: 1px solid hsl(0, 0%, 75%);
     .texts__title {
@@ -226,6 +224,8 @@ body {
       }
     }
     .topic__foldings {
+      padding-top: 0;
+      padding-bottom: 0;
       .folding {
         display: block;
         padding: {
