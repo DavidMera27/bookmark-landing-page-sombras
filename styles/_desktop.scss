@@ -1,8 +1,8 @@
 @media (min-width: 1440px) {
-  body {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
+  // body {
+  //   max-width: 1440px;
+  //   margin: 0 auto;
+  // }
   .container {
     width: 80%;
   }
@@ -96,7 +96,7 @@
         align-items: center;
         .form__input {
           flex-grow: 1;
-          &.form__input--btn{
+          &.form__input--btn {
             padding-left: 10px;
             padding-right: 10px;
           }
@@ -122,6 +122,22 @@
           }
         }
       }
+    }
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 0;
+    color: var(--grey-soft);
+    background-color: var(--blue-dark);
+    &__logo{
+      display: block;
+      margin-right: 3rem;
+    }
+    &__links {
+      flex-direction: row;
+      gap: 3rem;
     }
   }
 }

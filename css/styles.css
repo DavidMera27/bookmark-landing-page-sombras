@@ -31,6 +31,8 @@ body {
 
 .hero {
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .figure {
@@ -142,6 +144,11 @@ body {
   gap: 0.8rem;
 }
 
+.cta:hover {
+  color: var(--blue-soft);
+  background-color: white;
+  outline: 3px solid;
+}
 .cta {
   color: var(--grey-soft);
   background-color: var(--blue-soft);
@@ -152,6 +159,9 @@ body {
   text-align: center;
   padding: 0.9rem 1.3rem;
   border-radius: 5px;
+}
+.cta--active:hover {
+  color: var(--grey-darker);
 }
 .cta--active {
   color: var(--grey-darker);
@@ -293,6 +303,11 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.topics .topic__section .topic__form .form__input--btn:hover {
+  color: white;
+  background-color: var(--blue-soft);
+  outline: 3px solid;
+}
 .topics .topic__section .topic__form .form__input--btn {
   color: white;
   background-color: var(--red-soft);
@@ -355,6 +370,9 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+.footer__link:hover {
+  color: var(--red-soft);
+}
 .footer__link {
   color: inherit;
   text-transform: uppercase;
@@ -363,21 +381,34 @@ body {
 }
 .footer__social {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .footer__social .social__link {
+  display: block;
+  width: 30px;
+  height: 30px;
   text-decoration: none;
 }
-.footer__social .social__icon {
-  width: 100%;
-  display: block;
+.footer__social .social__link:nth-child(1):hover {
+  background-image: url("../images/icon-facebook-red.svg");
+}
+.footer__social .social__link:nth-child(1) {
+  background-image: url("../images/icon-facebook.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__social .social__link:nth-child(2):hover {
+  background-image: url("../images/icon-twitter-red.svg");
+}
+.footer__social .social__link:nth-child(2) {
+  background-image: url("../images/icon-twitter.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 @media (min-width: 1440px) {
-  body {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
   .container {
     width: 80%;
   }
@@ -490,6 +521,21 @@ body {
   .topics .topic__section .topic__form .input__wrapper--error .form__input--email {
     border: unset;
     outline: 3px solid var(--red-soft);
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 0;
+    color: var(--grey-soft);
+    background-color: var(--blue-dark);
+  }
+  .footer__logo {
+    display: block;
+    margin-right: 3rem;
+  }
+  .footer__links {
+    flex-direction: row;
+    gap: 3rem;
   }
 }
 

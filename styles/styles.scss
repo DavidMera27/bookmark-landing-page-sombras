@@ -32,6 +32,8 @@ body {
 
 .hero {
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .figure {
@@ -150,6 +152,11 @@ body {
 }
 
 .cta {
+  &:hover {
+    color: var(--blue-soft);
+    background-color: white;
+    outline: 3px solid;
+  }
   color: var(--grey-soft);
   background-color: var(--blue-soft);
   display: inline-block;
@@ -160,6 +167,9 @@ body {
   padding: 0.9rem 1.3rem;
   border-radius: 5px;
   &--active {
+    &:hover {
+      color: var(--grey-darker);
+    }
     color: var(--grey-darker);
     background-color: var(--grey-soft);
     box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.15);
@@ -305,6 +315,11 @@ body {
           padding-right: 1rem;
         }
         &--btn {
+          &:hover {
+            color: white;
+            background-color: var(--blue-soft);
+            outline: 3px solid;
+          }
           color: white;
           background-color: var(--red-soft);
         }
@@ -373,6 +388,9 @@ body {
     gap: 2rem;
   }
   &__link {
+    &:hover {
+      color: var(--red-soft);
+    }
     color: inherit;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -380,15 +398,30 @@ body {
   }
   &__social {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     .social__link {
-      text-decoration: none;
-      // width: 20px;
-    }
-
-    .social__icon {
-      width: 100%;
       display: block;
+      width: 30px;
+      height: 30px;
+      text-decoration: none;
+      &:nth-child(1) {
+        &:hover {
+          background-image: url("../images/icon-facebook-red.svg");
+        }
+        background-image: url("../images/icon-facebook.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      &:nth-child(2) {
+        &:hover {
+          background-image: url("../images/icon-twitter-red.svg");
+        }
+        background-image: url("../images/icon-twitter.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
     }
   }
 }
