@@ -412,6 +412,9 @@ body {
   .container {
     width: 80%;
   }
+  .hero {
+    overflow: unset;
+  }
   .hero__section {
     width: 80%;
     padding: 1rem 0;
@@ -436,6 +439,31 @@ body {
   }
   .hero__buttons {
     justify-content: start;
+  }
+  .figure__shadow::after {
+    content: "";
+    background-color: var(--blue-soft);
+    display: block;
+    position: absolute;
+    width: calc(50vw - 15%);
+    top: 30%;
+    left: 30%;
+    bottom: -10px;
+    border-bottom-left-radius: 80px;
+    z-index: -1;
+  }
+  .figure__shadow--left {
+    margin: 2rem 0 4rem;
+  }
+  .figure__shadow--left::after {
+    width: 80vw;
+    top: 20%;
+    right: 20%;
+    left: unset;
+    bottom: -40px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: 140px;
+    border-top-right-radius: 200px;
   }
   .topics .topic__section .topic__links {
     width: 50%;
