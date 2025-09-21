@@ -35,10 +35,9 @@ body {
 }
 
 .figure {
-  margin: 2rem auto;
   position: relative;
-  width: 100%;
-  max-width: 400px;
+  margin: 0 auto;
+  max-width: 600px;
   .figure__img {
     display: block;
     width: 90%;
@@ -62,7 +61,7 @@ body {
     z-index: -1;
   }
   &--left {
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem;
   }
   &--left::after {
     width: 80vw;
@@ -89,7 +88,7 @@ body {
   }
   .texts__paragraph {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 550px;
     color: var(--grey-darker);
     line-height: 1.7rem;
   }
@@ -121,6 +120,9 @@ body {
       padding: 1.5rem 0;
     }
     .texts__paragraph {
+      width: 100%;
+      max-width: unset;
+      margin: unset;
       margin-bottom: 2rem;
     }
     &:first-child {
@@ -180,6 +182,9 @@ body {
       text-align: center;
       align-items: center;
       .topic__link {
+        &:hover{
+          color: var(--red-soft);
+        }
         display: block;
         position: relative;
         width: 80%;
@@ -209,6 +214,7 @@ body {
     .topic__sample {
       display: none;
       flex-direction: column;
+      align-items: center;
       gap: 3rem;
       overflow: hidden;
       &--active {
