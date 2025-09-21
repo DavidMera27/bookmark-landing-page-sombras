@@ -73,6 +73,55 @@
           }
         }
       }
+      .topic__extensions {
+        width: auto;
+        margin: 0 auto;
+        flex-direction: row;
+        height: 450px;
+        .extension:nth-child(1) {
+          align-self: flex-start;
+        }
+        .extension:nth-child(2) {
+          align-self: center;
+        }
+        .extension:nth-child(3) {
+          align-self: flex-end;
+        }
+      }
+      .topic__foldings {
+        width: 40%;
+      }
+      .topic__form {
+        flex-direction: row;
+        align-items: center;
+        .form__input {
+          flex-grow: 1;
+          &.form__input--btn{
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+        .input__wrapper {
+          flex-grow: 3;
+          &::after {
+            position: absolute;
+            padding-top: 20px;
+            left: -3px;
+            right: -3px;
+            bottom: -20px;
+            z-index: -1;
+          }
+          &--error {
+            background-color: var(--red-soft);
+            border-radius: 5px;
+            z-index: 1;
+            .form__input--email {
+              border: unset;
+              outline: 3px solid var(--red-soft);
+            }
+          }
+        }
+      }
     }
   }
 }

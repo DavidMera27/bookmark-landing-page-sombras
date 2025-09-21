@@ -30,7 +30,7 @@ body {
   justify-content: space-between;
 }
 
-.hero{
+.hero {
   overflow: hidden;
 }
 
@@ -124,6 +124,7 @@ body {
       max-width: unset;
       margin: unset;
       margin-bottom: 2rem;
+      line-height: 2rem;
     }
     &:first-child {
       border-top: 1px solid hsl(0, 0%, 75%);
@@ -182,7 +183,7 @@ body {
       text-align: center;
       align-items: center;
       .topic__link {
-        &:hover{
+        &:hover {
           color: var(--red-soft);
         }
         display: block;
@@ -250,6 +251,9 @@ body {
           bottom: unset;
         }
         summary {
+          &:hover {
+            color: var(--red-soft);
+          }
           display: flex;
           justify-content: space-between;
           cursor: pointer;

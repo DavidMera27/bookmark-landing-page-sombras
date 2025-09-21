@@ -119,6 +119,7 @@ body {
   max-width: unset;
   margin: unset;
   margin-bottom: 2rem;
+  line-height: 2rem;
 }
 .texts--folding:first-child {
   border-top: 1px solid hsl(0, 0%, 75%);
@@ -243,6 +244,9 @@ body {
   display: block;
   padding-top: unset;
   padding-bottom: unset;
+}
+.topics .topic__section .topic__foldings .folding summary:hover {
+  color: var(--red-soft);
 }
 .topics .topic__section .topic__foldings .folding summary {
   display: flex;
@@ -437,6 +441,55 @@ body {
   }
   .topics .topic__section .topic__sample .texts .cta {
     width: max-content;
+  }
+  .topics .topic__section .topic__extensions {
+    width: auto;
+    margin: 0 auto;
+    flex-direction: row;
+    height: 450px;
+  }
+  .topics .topic__section .topic__extensions .extension:nth-child(1) {
+    align-self: flex-start;
+  }
+  .topics .topic__section .topic__extensions .extension:nth-child(2) {
+    align-self: center;
+  }
+  .topics .topic__section .topic__extensions .extension:nth-child(3) {
+    align-self: flex-end;
+  }
+  .topics .topic__section .topic__foldings {
+    width: 40%;
+  }
+  .topics .topic__section .topic__form {
+    flex-direction: row;
+    align-items: center;
+  }
+  .topics .topic__section .topic__form .form__input {
+    flex-grow: 1;
+  }
+  .topics .topic__section .topic__form .form__input.form__input--btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .topics .topic__section .topic__form .input__wrapper {
+    flex-grow: 3;
+  }
+  .topics .topic__section .topic__form .input__wrapper::after {
+    position: absolute;
+    padding-top: 20px;
+    left: -3px;
+    right: -3px;
+    bottom: -20px;
+    z-index: -1;
+  }
+  .topics .topic__section .topic__form .input__wrapper--error {
+    background-color: var(--red-soft);
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .topics .topic__section .topic__form .input__wrapper--error .form__input--email {
+    border: unset;
+    outline: 3px solid var(--red-soft);
   }
 }
 
