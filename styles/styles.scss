@@ -231,6 +231,9 @@ body {
       &--active {
         display: flex;
       }
+      .cta{
+        display: none;
+      }
     }
     .topic__extensions {
       width: 300px;

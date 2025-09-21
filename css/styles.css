@@ -227,6 +227,9 @@ body {
 .topics .topic__section .topic__sample--active {
   display: flex;
 }
+.topics .topic__section .topic__sample .cta {
+  display: none;
+}
 .topics .topic__section .topic__extensions {
   width: 300px;
   margin: 0 auto;
@@ -499,6 +502,7 @@ body {
     margin: unset;
   }
   .topics .topic__section .topic__sample .texts .cta {
+    display: block;
     width: max-content;
   }
   .topics .topic__section .topic__extensions {
